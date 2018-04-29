@@ -11,8 +11,6 @@ class CounterContainer extends React.Component {
   static propTypes = {
     increment: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired,
-    incrementIfOdd: PropTypes.func.isRequired,
-    counter: PropTypes.number.isRequired,
   }
 
   increment = () => {
@@ -23,17 +21,11 @@ class CounterContainer extends React.Component {
     this.props.decrement()
   }
 
-  incrementIfOdd = () => {
-    this.props.incrementIfOdd()
-  }
-
   render() {
     return (
       <Counter
-        counter={this.props.counter}
         increment={this.increment}
         decrement={this.decrement}
-        incrementIfOdd={this.incrementIfOdd}
       />
     )
   }
